@@ -48,11 +48,8 @@ public class CustomStringMethods
 
     public boolean longerThan(String myString, int maxLength) {
 
-        if (myString.length()>maxLength){
-            return true;
-        }else{
-            return false;
-        }
+        return myString.length()>maxLength;
+
 
 
     }
@@ -65,9 +62,7 @@ public class CustomStringMethods
                If str is apples and idx is 0, this method returns the string aapplesa
      */
     public String funnyString(String str, int idx) {
-        String substring = str.substring(idx);
-        String str1 = str.substring(0) +substring ;
-        return str1;
+        return str.substring(idx,idx+1)+str + str.substring(idx,idx+1);
 
     }
 
@@ -78,11 +73,10 @@ public class CustomStringMethods
               For example, if orig is bananas, then the method returns the “Pig Latin” version, ananasbay
     */
     public String pigLatin(String orig) {
-        String newStr = orig.substring(0) + orig ;
-        return newStr;
+        return orig.substring(1)+orig.substring(0,1)+"ay";
 
     }
 
-    public CustomStringMethods()
+
 }
 
